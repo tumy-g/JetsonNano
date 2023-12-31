@@ -33,6 +33,8 @@ sudo pip3 install -U --no-deps numpy==1.19.4 future==0.18.2 mock==3.0.5 keras_pr
 
 sudo apt-get install python3-opencv
 
+#->Error nvidial14t-bootloader-error.txt
+
 #install media pipe from the source code
 #=======================================
 
