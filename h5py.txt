@@ -21,3 +21,5 @@ cp dist/h5py-3.1.0-cp36-cp36m-linux_aarch64.whl /data/
 exit
 
 ls -l ~/data/h5py-3.1.0-cp36-cp36m-linux_aarch64.whl
+
+pip3 install  --no-deps ~.data/h5py tab
