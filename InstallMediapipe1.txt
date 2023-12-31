@@ -29,8 +29,7 @@ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip li
 
 sudo pip3 install -U --no-deps numpy==1.19.4 future==0.18.2 mock==3.0.5 keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.4.0 protobuf pybind11 cython pkgconfig
 
-# part of Numpy -> store large amount of data in binary format
-sudo env H5PY_SETUP_REQUIRES=0 pip3 install -U h5py==3.1.0
+# ここでh5pyをインストールする。h5py.txtを参照
 
 sudo apt-get install python3-opencv
 
