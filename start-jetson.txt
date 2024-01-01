@@ -1,0 +1,12 @@
+https://developer.nvidia.com/embedded/downloads
+
+1.Jetpack 4.6.1のSD Card Imagerをダウンロード
+
+2.BalenaEtherを使用してSD Cardにさっきダウンロードしてきたimgファイルを焼く
+
+3.起動。言語設定はEnglishにしておく。
+エラーメッセージをコピペして調べることができる。
+日本語ではコピペで記事が出てこない。Jetsonを使用するなら日本語は捨てるべし。
+キーボードの設定をUSにしないように注意
+
+4.WiFiに接続する。

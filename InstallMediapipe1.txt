@@ -54,10 +54,12 @@ sudo chmod 744 setup_opencv.sh
 # ====================================================
 ./setup_opencv.sh
 
-
+# finish 12/31
 
 # last step
 sudo pip3 install opencv_contrib_python
+#-> これ終わらない 1/1 「Building wheel for opencv-contrib-python (pyproject.toml) ...」
+
 git clone https://github.com/PINTO0309/mediapipe-bin
 cd mediapipe-bin
 
