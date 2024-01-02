@@ -64,13 +64,22 @@ git clone https://github.com/PINTO0309/mediapipe-bin
 cd mediapipe-bin
 
 sudo apt install curl
-
-./v0.8.5/numpy119x/mediapipe-0.8.5_cuda102-cp36-cp36m-linux_aarch64_numpy119x_jetsonnano_L4T32.5.1_download.sh
+./v0.8.5/download.sh
+unzip v0.8.5.zip -d v0.8.5
 
 sudo pip3 install numpy-1.19.4-cp36-none-manylinux2014_aarch64.whl
 sudo pip3 install mediapipe-0.8.5_cuda102-cp36-none-linux_aarch64.whl
-pip3 install dataclasses 
 
+#NOTE
+#It will take ~2,30 hours to build opencv-contrib on jetson nano, so if you see the line:
+#Building wheel for opencv-contrib-python (pyproject.toml): still running...
+#don't worry, it is not stuck. It just needs about two and a half hours.
+#→2、20時間buildに要するらしい...。やば...。
+
+pip3 install dataclasses
+
+#1/2　finish
+#ここから先は研究室でやる。
 
 #download examples from here : https://github.com/feitgemel/BodyPos/tree/master/MediaPipe/Demo
 

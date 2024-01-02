@@ -3,4 +3,8 @@ pip install 'https://github.com/jetson-nano-wheels/python3.6-numpy-1.19.4/releas
 git clone git@github.com:jetson-nano-wheels/python3.6-numpy-1.19.4
 cd python3.6-numpy-1.19.4
 git checkout -b feature-my-fancy-addition
+sudo apt-get install python3-venv
+$ pip install --upgrade virtualenv   # virtualenvのアップデート
+$ virtualenv -p python3 venv         # 環境名をvenvとして仮想環境構築
+$ source venv/bin/activate           # アクティベート
 ./init.sh
