@@ -1,0 +1,7 @@
+#MAX
+sudo jetson_clocks --fan
+#or
+$ echo 255 | sudo tee /sys/devices/pwm-fan/target_pwm
+
+#停止
+$ echo 0 | sudo tee /sys/devices/pwm-fan/target_pwm
