@@ -2,11 +2,11 @@
 
 # Environment
 Ubuntu 18.04 Bionic Beaver 
-
+<br>
 version:Jetpack 4.6.4  
-
+<br>
 Date 2023-12-30  
-
+<br>
 # prepare
 ## Start fan-control
 ```
