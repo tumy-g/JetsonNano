@@ -1,0 +1,4 @@
+1/11
+pythonでOpencvのバージョン確認をしたらいけるが、
+python3で同様にするとErrorがはかれる。なぜ。
+Mediapipeも動かない。なぜ。
