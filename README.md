@@ -2,7 +2,9 @@
 
 # Environment
 Ubuntu 18.04 Bionic Beaver 
+
 version:Jetpack 4.6.4
+
 Date 2023-12-30
 
 # prepare
@@ -149,11 +151,11 @@ cd mediapipe-bin
 sudo apt install curl
 ./v0.8.5/download.sh
 unzip v0.8.5.zip -d v0.8.5
-
-
-## It will take =2,30 hours to build opencv-contrib on jetson nano, so wait you
+```
+It will take ~2,30 hours to build opencv-contrib on jetson nano, so wait you
 sudo pip3 install numpy-1.19.4-cp36-none-manylinux2014_aarch64.whl
 sudo pip3 install mediapipe-0.8.5_cuda102-cp36-none-linux_aarch64.whl
-
+# Finish
+```
 pip3 install dataclasses
 ```
