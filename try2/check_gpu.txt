@@ -1,0 +1,3 @@
+cd /usr/local/lib/python3.8/site-packages/cv2/python-3.8/
+
+ldd cv2.cpython-38m-aarch64-linux-gnu.so | grep found
