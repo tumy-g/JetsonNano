@@ -1,0 +1,20 @@
+sudo apt-get install -y  \
+    libtesseract4 \
+    libatlas3-base \
+    python3-pip \
+    python3.8 \
+    python3.8-dev
+
+sudo apt-get clean
+
+python3.8 -m pip install pybind11 Cython==0.29.36 setuptools==49.6.0
+
+python3.8 -m pip install numpy==1.19.4
+
+wget https://github.com/lanzani/jetson-libraries/raw/main/libraries/opencv/l4t32.7.1/py3.8.0/ocv4.8.0/OpenCV-4.8.0-aarch64.sh
+
+chmod +x OpenCV-4.8.0-aarch64.sh
+
+sudo ./OpenCV-4.8.0-aarch64.sh --prefix=/usr/local --skip-license --exclude-subdir
+
+nano .bashrc
