@@ -18,3 +18,8 @@ chmod +x OpenCV-4.8.0-aarch64.sh
 sudo ./OpenCV-4.8.0-aarch64.sh --prefix=/usr/local --skip-license --exclude-subdir
 
 nano .bashrc
+
+## ここで一番下の行に以下を挿入
+export PYTHONPATH=/usr/local/lib/python3.6/site-packages:$PYTHONPATH 
+
+python3 -c "import cv2; print('OpenCV version:', str(cv2.__version__)); print(cv2.getBuildInformation())"
