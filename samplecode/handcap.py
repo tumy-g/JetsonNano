@@ -34,33 +34,33 @@ def gstreamer_pipeline(
     )
 
 # 静止画像の場合：
-with mp_hands.Hands(
-    static_image_mode=True,
-    max_num_hands=2,
-    min_detection_confidence=0.5) as hands:
-  for idx, file in enumerate(file_list):
-    # 画像を読み取り、利き手が正しく出力されるようにy軸を中心に反転
-    image = cv2.flip(cv2.imread(file), 1)
-    # 処理する前にBGR画像をRGBに変換
-    results = hands.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+# with mp_hands.Hands(
+#     static_image_mode=True,
+#     max_num_hands=2,
+#     min_detection_confidence=0.5) as hands:
+#   for idx, file in enumerate(file_list):
+#     # 画像を読み取り、利き手が正しく出力されるようにy軸を中心に反転
+#     image = cv2.flip(cv2.imread(file), 1)
+#     # 処理する前にBGR画像をRGBに変換
+#     results = hands.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
-    # 利き手を出力し、画像に手のランドマークを描画
-    print('Handedness:', results.multi_handedness)
-    if not results.multi_hand_landmarks:
-      continue
-    image_height, image_width, _ = image.shape
-    annotated_image = image.copy()
-    for hand_landmarks in results.multi_hand_landmarks:
-      print('hand_landmarks:', hand_landmarks)
-      print(
-          f'Index finger tip coordinates: (',
-          f'{hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP].x * image_width}, '
-          f'{hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP].y * image_height})'
-      )
-      mp_drawing.draw_landmarks(
-          annotated_image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-    cv2.imwrite(
-        '/tmp/annotated_image' + str(idx) + '.png', cv2.flip(annotated_image, 1))
+#     # 利き手を出力し、画像に手のランドマークを描画
+#     print('Handedness:', results.multi_handedness)
+#     if not results.multi_hand_landmarks:
+#       continue
+#     image_height, image_width, _ = image.shape
+#     annotated_image = image.copy()
+#     for hand_landmarks in results.multi_hand_landmarks:
+#       print('hand_landmarks:', hand_landmarks)
+#       print(
+#           f'Index finger tip coordinates: (',
+#           f'{hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP].x * image_width}, '
+#           f'{hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP].y * image_height})'
+#       )
+#       mp_drawing.draw_landmarks(
+#           annotated_image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+#     cv2.imwrite(
+#         '/tmp/annotated_image' + str(idx) + '.png', cv2.flip(annotated_image, 1))
 
 # Webカメラ入力の場合：
 cap = cv2.VideoCapture(gstreamer_pipeline(display_width=640, display_height=360), cv2.CAP_GSTREAMER)
