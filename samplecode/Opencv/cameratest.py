@@ -4,11 +4,11 @@ import cv2
 
 
 def gstreamer_pipeline(
-    capture_width=3280,
-    capture_height=2464,
-    display_width=1920,
-    display_height=1080,
-    framerate=21,
+    capture_width=1280,
+    capture_height=720,
+    display_width=1280,
+    display_height=720,
+    framerate=60,
     flip_method=0,
 ):
     return (
@@ -29,7 +29,6 @@ def gstreamer_pipeline(
             display_height,
         )
     )
-
 
 def camera_capture():
     USE_GPU = 1
