@@ -70,8 +70,8 @@ with mp_hands.Hands(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5) as hands:
   while cap.isOpened():
-    success, image = cap.read()
-    if not success:
+    ret, image = cap.read()
+    if not ret:
       print("Ignoring empty camera frame.")
       # ビデオをロードする場合は、「continue」ではなく「break」を使用してください
       continue
