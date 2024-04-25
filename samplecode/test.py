@@ -1,5 +1,10 @@
 import sys
 import cv2
+import time
+
+import mediapipe as mp
+
+video_source = "/dev/video0"
 
 # GStreamer pipeline
 def gstreamer_pipeline(
@@ -31,6 +36,8 @@ def gstreamer_pipeline(
 
 print("captuer start")
 cap = cv2.VideoCapture(gstreamer_pipeline(display_width=640, display_height=360), cv2.CAP_GSTREAMER)
+time.sleep(2)
+
 if not cap.isOpened():
     print('Can not open camera.')
     sys.exit()
