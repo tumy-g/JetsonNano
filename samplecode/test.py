@@ -38,6 +38,8 @@ print("captuer start")
 cap = cv2.VideoCapture(gstreamer_pipeline(display_width=640, display_height=360), cv2.CAP_GSTREAMER)
 time.sleep(2)
 
+print("finish capter")
+
 if not cap.isOpened():
     print('Can not open camera.')
     sys.exit()
