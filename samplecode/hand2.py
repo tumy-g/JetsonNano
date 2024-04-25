@@ -1,8 +1,7 @@
+import sys
+import time
 import cv2
 import mediapipe as mp
-
-mp_drawing = mp.solutions.drawing_utils
-mp_hands = mp.solutions.hands
 
 video_source = "/dev/video0"
 def gstreamer_pipeline(
@@ -31,8 +30,15 @@ def gstreamer_pipeline(
             display_height,
         )
     )
+
+mp_drawing = mp.solutions.drawing_utils
+mp_hands = mp.solutions.hands
+
+print("capture start")
+
 # For webcam input:
 cap = cv2.VideoCapture(gstreamer_pipeline(display_width=640, display_height=360), cv2.CAP_GSTREAMER)
+time.sleep(2)
 
 print("Camera start")
 
