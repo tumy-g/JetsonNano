@@ -34,8 +34,13 @@ def gstreamer_pipeline(
         )
     )
 
+# Initialize MediaPipe Pose and Drawing utilities
+mp_pose = mp.solutions.pose
+mp_drawing = mp.solutions.drawing_utils
+pose = mp_pose.Pose()
+
 print("captuer start")
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(gstreamer_pipeline(display_width=640, display_height=360), cv2.CAP_GSTREAMER)
 time.sleep(2)
 
 print("finish capture")
