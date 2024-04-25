@@ -67,4 +67,5 @@ while cap.isOpened():
     cv2.imshow('MediaPipe Pose', frame)
 
     # Exit if 'q' keypyt
-    cv2.waitKey(1)
+    if cv2.waitKey(30) == ord('q') or cv2.waitKey(30) == 27:
+        break
