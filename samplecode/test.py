@@ -43,5 +43,4 @@ while True:
     if cv2.waitKey(30) == ord('q') or cv2.waitKey(30) == 27:
         break
 
-cv2.destroyAllWindows()
 cap.release()
